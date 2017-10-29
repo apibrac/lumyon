@@ -1,0 +1,39 @@
+Projet "Lumyon" premières idées
+
+Premières idées :
+
+1.1) Objets pré-découpés :
+Les objets "partie de corps" viennent avec un découpage format_animata(.nmt)-friendly (en xml).
+
+A l'assemblage ils sont ajoutés (dans un nouveau layer ?) avec leur découpage +
+- position
+- orientation
+- scale ?
+- membre de raccordement ?
+
+Pb dans la vision actuelle :
+- .nmt potentiellement très lourd en sortie + beaucoup d'images à charger -> peut être géré ?
+- moyen de rattachement à un membre inconnu
+- calculs et manipulation de xml : surmontable mais pas confortable
+
+
+1.2) Un grand découpage par member
+Un layer par membre est préparé : le fichier .nmt est générique et ne sera plus touché. Il importe des fichiers images aux noms de chaque membre.
+
+A l'assemblage, les objets "partie du corps" sont utilisées pour générer une image.
+
+Pb dans la vision actuelle :
+- Manipulation algorithmique d'images
+- découpage potentiellement pas adaptés à chaque pdc
+
+
+Décision 1 :
+Besoins non clairs, choix de faire un générateur de xml au bon format pour mieux s'adapter après.
+Le générateur doit générer :
+- le canvas global (version, formats etc)
+- le squelette humain
+- une liste de layers en fonction de :
+  - un membre de rattachement
+  - un nom de fichier d'image
+  - une taille
+
