@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<racine>
+  <enfant foo="bar">
+    <grandchild baz="fizbuzz">grandchild content</grandchild>
+  </enfant>
+  <sibling>with content!</sibling>
+</racine>
