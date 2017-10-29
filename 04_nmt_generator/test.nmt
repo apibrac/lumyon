@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animata version="0.004">
+  <layer name="lay" x="0" y="0" z="0">
+    <texture location="undefined" x="0" y="0" scale="1"/>
+    <mesh>
+      <vertices/>
+      <faces/>
+    </mesh>
+  </layer>
+</animata>
