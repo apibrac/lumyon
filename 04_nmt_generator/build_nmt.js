@@ -1,15 +1,12 @@
 var { newFile } = require('./xml_builder.js');
-var libxml = require("libxmljs");
+var { Element } = require("libxmljs");
 
 function nmtFile(xmlFile){
   return xmlFile.content
     .node('animata').attr({version: '0.004'});
 }
 
-let node = new libxml.Document();
-node = node.node('test');
-
-Object.assign(Object.getPrototypeOf(node), {
+Object.assign(Element.prototype, {
   addLayer({file, name = file.slice(0, -4)}){
     return this
       .node('layer').attr({name, x: 0, y: 0, z: 0})
