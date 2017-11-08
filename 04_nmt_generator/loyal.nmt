@@ -3,10 +3,12 @@
   <layer name="loyal" x="0" y="0" z="0">
     <texture location="loyal.png" x="0" y="0" scale="0.2"/>
     <mesh>
-      <vertex selected="0" x="0" y="0" u="0" v="0"/>
-      <vertex selected="0" x="0" y="2046" u="0" v="5"/>
-      <vertex selected="0" x="1942" y="2046" u="5" v="5"/>
-      <vertex selected="0" x="1942" y="0" u="5" v="0"/>
+      <vertices>
+        <vertex selected="0" x="0" y="0" u="0" v="0"/>
+        <vertex selected="0" x="0" y="2046" u="0" v="5"/>
+        <vertex selected="0" x="1942" y="2046" u="5" v="5"/>
+        <vertex selected="0" x="1942" y="0" u="5" v="0"/>
+      </vertices>
       <faces>
         <face v0="0" v1="3" v2="2"/>
         <face v0="0" v1="1" v2="2"/>
