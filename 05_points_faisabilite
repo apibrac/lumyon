@@ -1,0 +1,6 @@
+Dans le dossier build faire ./animata
+
+u et v sont les rapports au maximum
+s'assurer qu'ils sont à 0 pour x et y à y (resp)
+  et à 1 quand x et y sont à leur max
+les rapports doivent être constant ! (pour chaque si rectangle, pout tous si carré)

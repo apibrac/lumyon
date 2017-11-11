@@ -1,5 +1,6 @@
 var { newFile } = require('./xml_builder.js');
 var { Element } = require("libxmljs");
+var { mesh } = require('./mesh_builder.js');
 
 function nmtFile(xmlFile){
   return xmlFile.content
@@ -48,12 +49,21 @@ Object.assign(Element.prototype, {
     return this
       .node('face').attr({v0, v1, v2})
     .parent()
+  },
+
+  createMesh(){
+    let newMesh = this.node('mesh');
+    return new mesh(newMesh.node('vertices'), newMesh.node('faces'));
   }
 })
 
 var file = newFile('loyal.nmt');
 
 nmtFile(file)
-  .addLayer({file: "loyal.png"})
+  .layer({file: "loyal.png"})
+    .createMesh()
+      .addNormedRectangle({x1: 1000, y1: 1000, x_max: 2000, y_max: 2000})
+      .addNormedRectangle({x0: 1000, x1: 2000, y1: 1000, x_max: 2000, y_max: 2000});
+//      .addRectangle({x1: 1942, y1: 2046});
 
 file.save();
