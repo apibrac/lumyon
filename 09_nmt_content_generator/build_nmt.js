@@ -46,6 +46,20 @@ Object.assign(Element.prototype, {
     .parent();
   },
 
+  attachVertex(opts){
+    return this
+      .node('vertex').attr({d: 0, w: 1, ...opts})
+    .parent();
+  },
+
+  addJoint(opts){
+    this
+      .node('joint')
+        .attr(opts)
+      .parent();
+    return this;
+  },
+
   addFace(v0, v1, v2){
     return this
       .node('face').attr({v0, v1, v2})
@@ -61,5 +75,9 @@ Object.assign(Element.prototype, {
       skeleton.node('joints'),
       skeleton.node('bones')
     );
+  },
+
+  newLayer(args){
+    return this.layer(args).createContent();
   }
 })

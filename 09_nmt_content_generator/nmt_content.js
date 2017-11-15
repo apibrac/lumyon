@@ -1,3 +1,4 @@
+var { rotateVertex } = require('./bone_rotation.js');
 
 exports.content = content;
 
@@ -11,25 +12,60 @@ function content(vertices, faces, joints, bones){
   })
 }
 
+function coordOf({x, y}){
+  return {x, y};
+}
+
 content.prototype = {
+  withJoints(joints){
+    this.current_joints = joints;
+    return this;
+  },
+
+  saveJoints(){
+    this.current_joints.forEach(joint=>{
+      this.joints.addJoint(joint)
+    })
+  },
+
+  addBone(args){
+    this.current_bone = this.bones
+      .node('bone')
+        .attr(args)
+      .node('attached')
+    this.saveBoneCoord(args);
+    return this;
+  },
+
+  saveBoneCoord({j0, j1}){
+    this.current_bone_coord = {
+      j0: coordOf(this.current_joints[j0]),
+      j1: coordOf(this.current_joints[j1])
+    }
+  },
+
   addRectangle({x0 = 0, y0 = 0, x1, y1, u0 = 0, u1, v0 = 0, v1}){
     let v = this.v_index;
 
-    this.vertices
-      .addVertex({x: x0, y: y0, u: u0, v: v0})
-      .addVertex({x: x0, y: y1, u: u0, v: v1})
-      .addVertex({x: x1, y: y1, u: u1, v: v1})
-      .addVertex({x: x1, y: y0, u: u1, v: v0});
+    this
+      .addAttachedVertice({x: x0, y: y0, u: u0, v: v0})
+      .addAttachedVertice({x: x0, y: y1, u: u0, v: v1})
+      .addAttachedVertice({x: x1, y: y1, u: u1, v: v1})
+      .addAttachedVertice({x: x1, y: y0, u: u1, v: v0});
 
     this.faces
       .addFace(v + 0, v + 3, v + 2)
       .addFace(v + 0, v + 1, v + 2);
 
-    this.v_index = v + 4;
-
     return this;
   },
-  addNormedRectangle({x0 = 0, y0 = 0, x1, y1, x_max, y_max}){
-    return this.addRectangle({x0, y0, x1, y1, u0: x0/x_max, v0: y0/y_max, u1: x1/x_max, v1: y1/y_max});
+
+  addAttachedVertice({x, y, u, v}){
+    this.vertices
+      .addVertex({x, y, u, v});
+    this.current_bone
+      .addVertex({id: this.v_index, ...rotateVertex(this.current_bone_coord, {x, y})});
+    this.v_index = this.v_index + 1;
+    return this;
   }
 }
