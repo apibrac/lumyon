@@ -57,13 +57,12 @@ Object.assign(Element.prototype, {
   }
 })
 
-var file = newFile('loyal.nmt');
+var file = newFile('twins.nmt');
 
 nmtFile(file)
-  .layer({file: "loyal.png"})
+  .layer({file: "twins.png"})
     .createMesh()
-      .addNormedRectangle({x1: 1000, y1: 1000, x_max: 2000, y_max: 2000})
-      .addNormedRectangle({x0: 1000, x1: 2000, y1: 1000, x_max: 2000, y_max: 2000});
+      .addNormedRectangle({x1: 1000, y1: 1000, x_max: 1000, y_max: 1000})
 //      .addRectangle({x1: 1942, y1: 2046});
 
 file.save();

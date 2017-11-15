@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animata version="0.004">
+  <layer name="twins" x="0" y="0" z="0">
+    <texture location="twins.png" x="0" y="0" scale="0.2"/>
+    <mesh>
+      <vertices>
+        <vertex selected="0" x="0" y="0" u="0" v="0"/>
+        <vertex selected="0" x="0" y="1000" u="0" v="1"/>
+        <vertex selected="0" x="1000" y="1000" u="1" v="1"/>
+        <vertex selected="0" x="1000" y="0" u="1" v="0"/>
+      </vertices>
+      <faces>
+        <face v0="0" v1="3" v2="2"/>
+        <face v0="0" v1="1" v2="2"/>
+      </faces>
+    </mesh>
+  </layer>
+</animata>
