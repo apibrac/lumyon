@@ -5,9 +5,9 @@
     <mesh>
       <vertices>
         <vertex selected="0" x="0" y="0" u="0" v="0"/>
-        <vertex selected="0" x="0" y="2046" u="0" v="undefined"/>
-        <vertex selected="0" x="1942" y="2046" u="undefined" v="undefined"/>
-        <vertex selected="0" x="1942" y="0" u="undefined" v="0"/>
+        <vertex selected="0" x="0" y="2046" u="0" v="1"/>
+        <vertex selected="0" x="1942" y="2046" u="1" v="1"/>
+        <vertex selected="0" x="1942" y="0" u="1" v="0"/>
       </vertices>
       <faces>
         <face v0="0" v1="3" v2="2"/>
@@ -22,12 +22,12 @@
         <joint x="589.313232" y="306.688446"/>
       </joints>
       <bones>
-        <bone j0="0" j1="1">
+        <bone j0="0" j1="1" stiffness="0.5" size="200" radius="0.5">
           <attached>
-            <vertex selected="0" id="0" ca="-491.1476156274707" sa="-490.6072487464314"/>
-            <vertex selected="0" id="1" ca="-418.7680548179701" sa="1554.112096097018"/>
-            <vertex selected="0" id="2" ca="1522.0163868662812" sa="1485.4116527480198"/>
-            <vertex selected="0" id="3" ca="1449.6368260567808" sa="-559.3076920954295"/>
+            <vertex selected="0" id="0" w="0.1" d="500" ca="-491.1476156274707" sa="-490.6072487464314"/>
+            <vertex selected="0" id="1" w="0.1" d="500" ca="-418.7680548179701" sa="1554.112096097018"/>
+            <vertex selected="0" id="2" w="0.1" d="500" ca="1522.0163868662812" sa="1485.4116527480198"/>
+            <vertex selected="0" id="3" w="0.1" d="500" ca="1449.6368260567808" sa="-559.3076920954295"/>
           </attached>
         </bone>
       </bones>

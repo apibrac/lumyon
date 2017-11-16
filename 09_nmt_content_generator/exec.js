@@ -13,8 +13,8 @@ var file = newFile('twins.nmt');
 nmtFile(file)
   .newLayer({file: "twins.png"})
     .withJoints(joints)
-      .addBone({j0: 0, j1: 1})
-        .addRectangle({x1: 1942, y1: 2046})
+      .addBone({j0: 0, j1: 1, stiffness: 0.5, size: 200, radius: 0.5})
+        .addRectangle({x1: 1942, y1: 2046, u1: 1, v1: 1})
       .saveJoints()
 //    .addNormedRectangle({x1: 1000, y1: 1000, x_max: 1000, y_max: 1000})
 

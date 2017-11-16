@@ -64,7 +64,7 @@ content.prototype = {
     this.vertices
       .addVertex({x, y, u, v});
     this.current_bone
-      .addVertex({id: this.v_index, ...rotateVertex(this.current_bone_coord, {x, y})});
+      .addVertex({id: this.v_index, w: 0.1, d: 500, ...rotateVertex(this.current_bone_coord, {x, y})});
     this.v_index = this.v_index + 1;
     return this;
   }
