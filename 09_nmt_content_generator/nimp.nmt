@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animata version="0.004">
+  <layer name="nimp" x="0" y="0" z="0">
+    <texture location="nimp.png" x="0" y="0" scale="0.2"/>
+    <mesh>
+      <vertices>
+        <vertex selected="0" x="0" y="0" u="0" v="0"/>
+        <vertex selected="0" x="0" y="5000" u="0" v="0.5"/>
+        <vertex selected="0" x="5000" y="5000" u="0.5" v="0.5"/>
+        <vertex selected="0" x="5000" y="0" u="0.5" v="0"/>
+        <vertex selected="0" x="5000" y="0" u="0.5" v="0"/>
+        <vertex selected="0" x="5000" y="5000" u="0.5" v="0.5"/>
+        <vertex selected="0" x="10000" y="5000" u="1" v="0.5"/>
+        <vertex selected="0" x="10000" y="0" u="1" v="0"/>
+        <vertex selected="0" x="0" y="5000" u="0" v="0.5"/>
+        <vertex selected="0" x="0" y="10000" u="0" v="1"/>
+        <vertex selected="0" x="5000" y="10000" u="0.5" v="1"/>
+        <vertex selected="0" x="5000" y="5000" u="0.5" v="0.5"/>
+        <vertex selected="0" x="5000" y="5000" u="0.5" v="0.5"/>
+        <vertex selected="0" x="5000" y="10000" u="0.5" v="1"/>
+        <vertex selected="0" x="10000" y="10000" u="1" v="1"/>
+        <vertex selected="0" x="10000" y="5000" u="1" v="0.5"/>
+      </vertices>
+      <faces>
+        <face v0="0" v1="3" v2="2"/>
+        <face v0="0" v1="1" v2="2"/>
+        <face v0="4" v1="7" v2="6"/>
+        <face v0="4" v1="5" v2="6"/>
+        <face v0="8" v1="11" v2="10"/>
+        <face v0="8" v1="9" v2="10"/>
+        <face v0="12" v1="15" v2="14"/>
+        <face v0="12" v1="13" v2="14"/>
+      </faces>
+    </mesh>
+    <skeleton>
+      <joints>
+        <joint name="neck" x="3689.715332" y="369.187500" fixed="0" selected="0"/>
+        <joint name="torso" x="3660.975342" y="629.365540" fixed="0" selected="0"/>
+        <joint name="r_shoulder" x="3498.682129" y="381.608612" fixed="0" selected="0"/>
+        <joint name="l_shoulder" x="3891.168457" y="403.478607" fixed="0" selected="0"/>
+        <joint name="r_hip" x="3538.670898" y="874.901245" fixed="0" selected="0"/>
+        <joint name="l_hip" x="3755.248779" y="892.600952" fixed="0" selected="0"/>
+        <joint name="r_knee" x="3498.700439" y="1235.114380" fixed="0" selected="0"/>
+        <joint name="r_foot" x="3450.854248" y="1673.970337" fixed="0" selected="0"/>
+        <joint name="l_elbow" x="3881.965088" y="719.201355" fixed="0" selected="0"/>
+        <joint name="l_hand" x="3850.040771" y="1057.442505" fixed="0" selected="0"/>
+        <joint name="l_foot" x="3809.380371" y="1698.828369" fixed="0" selected="0"/>
+        <joint name="head" x="3654.602051" y="227.516327" fixed="0" selected="0"/>
+        <joint name="l_knee" x="3793.011475" y="1258.406250" fixed="0" selected="0"/>
+        <joint name="r_elbow" x="3290.791748" y="602.199036" fixed="0" selected="0"/>
+        <joint name="r_hand" x="3388.517334" y="927.415710" fixed="0" selected="1"/>
+      </joints>
+      <bones>
+        <bone size="261.7605767174303" j0="0" j1="1">
+          <attached>
+            <vertex selected="0" id="0" w="0.1" d="500" ca="-92.72365787111991" sa="3707.9431917037177"/>
+            <vertex selected="0" id="1" w="0.1" d="500" ca="4877.047635856991" sa="3158.968430866742"/>
+            <vertex selected="0" id="2" w="0.1" d="500" ca="4328.072875020015" sa="-1810.8028628613692"/>
+            <vertex selected="0" id="3" w="0.1" d="500" ca="-641.6984187080958" sa="-1261.8281020243935"/>
+          </attached>
+        </bone>
+        <bone size="393.09517212530596" j0="2" j1="3">
+          <attached>
+            <vertex selected="0" id="4" w="0.1" d="500" ca="-3711.041729090295" sa="-186.36708711824267"/>
+            <vertex selected="0" id="5" w="0.1" d="500" ca="-3432.8648834964174" sa="4805.888679824737"/>
+            <vertex selected="0" id="6" w="0.1" d="500" ca="1559.3908834465628" sa="4527.711834230859"/>
+            <vertex selected="0" id="7" w="0.1" d="500" ca="1281.214037852685" sa="-464.5439327121205"/>
+          </attached>
+        </bone>
+        <bone size="217.29992675179642" j0="4" j1="5">
+          <attached>
+            <vertex selected="0" id="8" w="0.1" d="500" ca="-3706.825775136401" sa="-583.7591459808739"/>
+            <vertex selected="0" id="9" w="0.1" d="500" ca="-3299.5613258433077" sa="4399.626818234819"/>
+            <vertex selected="0" id="10" w="0.1" d="500" ca="1683.824638372387" sa="3992.362368941726"/>
+            <vertex selected="0" id="11" w="0.1" d="500" ca="1276.5601890792934" sa="-991.0235952739674"/>
+          </attached>
+        </bone>
+        <bone size="441.45646329801804" j0="6" j1="7">
+          <attached>
+            <vertex selected="0" id="12" w="0.1" d="500" ca="-1069.3686864389374" sa="3611.955380681705"/>
+            <vertex selected="0" id="13" w="0.1" d="500" ca="3901.1776016526414" sa="3070.0424744513557"/>
+            <vertex selected="0" id="14" w="0.1" d="500" ca="3359.264695422293" sa="-1900.5038136402231"/>
+            <vertex selected="0" id="15" w="0.1" d="500" ca="-1611.2815926692867" sa="-1358.590907409874"/>
+          </attached>
+        </bone>
+      </bones>
+    </skeleton>
+  </layer>
+</animata>
