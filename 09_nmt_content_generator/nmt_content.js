@@ -29,12 +29,22 @@ content.prototype = {
   },
 
   addBone(args){
+    if(!args.size) args = {
+      size: this.sizeBetweenJoints(args.j0, args.j1),
+      ...args
+    }
     this.current_bone = this.bones
       .node('bone')
         .attr(args)
       .node('attached')
     this.saveBoneCoord(args);
     return this;
+  },
+
+  sizeBetweenJoints(a, b){
+    a = this.current_joints[a]
+    b = this.current_joints[b]
+    return Math.sqrt((a.x - b.x)*(a.x - b.x) + (a.y - b.y)*(a.y - b.y))
   },
 
   saveBoneCoord({j0, j1}){

@@ -4,10 +4,10 @@
     <texture location="twins.png" x="0" y="0" scale="0.2"/>
     <mesh>
       <vertices>
-        <vertex selected="0" x="0" y="0" u="0" v="0"/>
-        <vertex selected="0" x="0" y="2046" u="0" v="1"/>
-        <vertex selected="0" x="1942" y="2046" u="1" v="1"/>
-        <vertex selected="0" x="1942" y="0" u="1" v="0"/>
+        <vertex selected="0" x="1333.3333333333333" y="750" u="0.6666666666666666" v="0.25"/>
+        <vertex selected="0" x="1333.3333333333333" y="1500" u="0.6666666666666666" v="0.5"/>
+        <vertex selected="0" x="2000" y="1500" u="1" v="0.5"/>
+        <vertex selected="0" x="2000" y="750" u="1" v="0.25"/>
       </vertices>
       <faces>
         <face v0="0" v1="3" v2="2"/>
@@ -16,18 +16,18 @@
     </mesh>
     <skeleton>
       <joints>
-        <joint x="373.546997" y="504.137451"/>
+        <joint x="373.546997" y="604.137451"/>
         <joint x="573.421814" y="511.212677"/>
         <joint x="215.090378" y="111.93663"/>
         <joint x="589.313232" y="306.688446"/>
       </joints>
       <bones>
-        <bone j0="0" j1="1" stiffness="0.5" size="200" radius="0.5">
+        <bone size="220.41995393732984" j0="0" j1="1">
           <attached>
-            <vertex selected="0" id="0" w="0.1" d="500" ca="-491.1476156274707" sa="-490.6072487464314"/>
-            <vertex selected="0" id="1" w="0.1" d="500" ca="-418.7680548179701" sa="1554.112096097018"/>
-            <vertex selected="0" id="2" w="0.1" d="500" ca="1522.0163868662812" sa="1485.4116527480198"/>
-            <vertex selected="0" id="3" w="0.1" d="500" ca="1449.6368260567808" sa="-559.3076920954295"/>
+            <vertex selected="0" id="0" w="0.1" d="500" ca="698.6227568569045" sa="536.8941267188487"/>
+            <vertex selected="0" id="1" w="0.1" d="500" ca="382.4373151349838" sa="1216.987330951264"/>
+            <vertex selected="0" id="2" w="0.1" d="500" ca="986.96460778602" sa="1498.041056926305"/>
+            <vertex selected="0" id="3" w="0.1" d="500" ca="1303.1500495079406" sa="817.9478526938897"/>
           </attached>
         </bone>
       </bones>
