@@ -57,6 +57,8 @@ content.prototype = {
   addRectangle({x0 = 0, y0 = 0, x1, y1, u0 = 0, u1, v0 = 0, v1}){
     let v = this.v_index;
 
+    this.current_origin = {x0, y0};
+
     this
       .addAttachedVertice({x: x0, y: y0, u: u0, v: v0})
       .addAttachedVertice({x: x0, y: y1, u: u0, v: v1})
@@ -73,6 +75,9 @@ content.prototype = {
   addAttachedVertice({x, y, u, v}){
     this.vertices
       .addVertex({x, y, u, v});
+    const {x0, y0} = this.current_origin;
+    x = x - x0;
+    y = y - y0;
     this.current_bone
       .addVertex({id: this.v_index, w: 0.1, d: 500, ...rotateVertex(this.current_bone_coord, {x, y})});
     this.v_index = this.v_index + 1;

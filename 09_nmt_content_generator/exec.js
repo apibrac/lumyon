@@ -19,6 +19,8 @@ nmtFile(file)
     .withJoints(joints)
       .addBone({j0: 0, j1: 1})
         .addRectangle(subPart(1, 2))
+      .addBone({j0: 2, j1: 3})
+        .addRectangle(subPart(0, 1))
       .saveJoints()
 //    .addNormedRectangle({x1: 1000, y1: 1000, x_max: 1000, y_max: 1000})
 
