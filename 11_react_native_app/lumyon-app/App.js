@@ -1,7 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { NativeRouter, Route, Link } from 'react-router-native';
 
 const SERVER_ENDPOINT = "http://192.168.0.12:3000/";
+
+const Creation = () => <Text>Création</Text>
 
 export default class App extends React.Component {
   state = {
@@ -24,15 +27,19 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        {
-          this.state.result ? (
-            <Text>{"Am in ok? " + JSON.stringify(this.state.result)}</Text>
-          ) : (
-            <Text>Trying to get response from {SERVER_ENDPOINT}</Text>
-          )
-        }
-      </View>
+      <NativeRouter>
+        <View style={styles.container}>
+          <Route exact path="/" render={() => (
+            <View>
+              <Text>Welcome</Text>
+              <Link to="/creation">
+                <Text>Create</Text>
+              </Link>
+            </View>
+          )} />
+          <Route path="/creation" component={Creation}/>
+        </View>
+      </NativeRouter>
     );
   }
 }
