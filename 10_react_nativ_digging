@@ -1,0 +1,7 @@
+
+DRAG N DROP
+ - PanResponder (à la mano), voir les tutos
+ - react-native-gestures (https://github.com/kiddkai/react-native-gestures), tout fait mais toujours en alpha
+
+CREATE IMAGE
+ - react-native-view-shot (https://github.com/gre/react-native-view-shot), screen shot of a view
