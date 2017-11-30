@@ -1,3 +1,6 @@
 [submodule "11_react_native_app/app"]
 	path = 11_react_native_app/app
 	url = git@github.com:apibrac/dc-warm-up-app.git
+[submodule "11_react_native_app/server"]
+	path = 11_react_native_app/server
+	url = git@github.com:apibrac/dc-warm-up-server.git
